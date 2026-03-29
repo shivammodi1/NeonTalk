@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import { io } from "socket.io-client"; // Import Socket.IO client
 import { setOnlineUsers, setSocket } from "./redux/userSlice";
 
-export const url = "http://localhost:3000/api";
+export const url = "https://neontalk.onrender.com/api";
 
 function App() {
   getCurrentUser();
@@ -32,7 +32,7 @@ function App() {
       }
       return;
     }
-    const socketio = io("http://localhost:3000", {
+    const socketio = io("https://neontalk.onrender.com", {
       query: {
         userId: userData?._id,
       },
